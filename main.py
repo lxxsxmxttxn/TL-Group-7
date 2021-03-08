@@ -56,8 +56,8 @@ complete.to_csv("complete7.csv")
 
 # get the average suicide data for all years
 sad_2 = data_sad.dropna(subset=["suicides_no"])
-sad_2 = sad_2.groupby(["country", "year"]).mean()
-sad_2 = sad_2.groupby(["country"]).sum()
+sad_2 = sad_2.groupby(["country", "year"]).sum()
+sad_2 = sad_2.groupby(["country"]).mean()
 sad_2.to_csv("sad_avg.csv")
 
 # get average happiness data for all years

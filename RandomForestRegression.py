@@ -9,12 +9,12 @@ data = data.astype(float)
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
-X = data.drop('suicides_no',1)
+X = data.drop('suicides_no', 1)
 y = data['suicides_no']
 
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.1,random_state=5)
 reg = RandomForestRegressor(n_estimators=51)
-reg.fit(X_train,y_train)
+reg.fit(X_train, y_train)
 y_pred = reg.predict(X_test)
 print(y_pred)
 print(y_test)
